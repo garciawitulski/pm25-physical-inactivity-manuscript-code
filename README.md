@@ -1,8 +1,8 @@
 # PM2.5 exposure and physical inactivity: manuscript code
 
-This repository contains the code accompanying the manuscript, *Impacts of long-term PM2.5 exposure on physical inactivity: quasi-experimental evidence and projected cobenefits of cleaner air pathways*.
+This repository contains the code and processed data accompanying the manuscript, *Impacts of long-term PM2.5 exposure on physical inactivity: quasi-experimental evidence and projected cobenefits of cleaner air pathways*.
 
-Datasets and generated artifacts are not tracked in the repository.
+The minimum analytical and derived inputs needed to reproduce the five main-manuscript figures are included under `data/`. Generated artifacts are not tracked.
 
 ## Figure map
 
@@ -24,14 +24,14 @@ The code was validated with R 4.6.1. Install the required CRAN packages with:
 Rscript requirements.R
 ```
 
-## Required inputs
+## Included inputs
 
-Set `PM25_DATA_ROOT` to the root directory containing the analytical and derived inputs listed below. These files are not tracked by this repository.
+The repository includes the following processed inputs:
 
 ```text
 Data_base.csv
 coef_allmodels_pm25.csv
-final_country_a*_panel.dta
+final_country_anio_panel.dta
 PM25_mensual_pop_long.csv
 outputs/derived/pm25_country_scenario_figure_data.csv
 outputs/derived/msa_temperature_style_previews/world_coords.csv
@@ -39,22 +39,22 @@ outputs/derived/msa_temperature_style_previews/world_attributes.csv
 outputs/alternative_burden_ccpi_style_histPM_PI2020/final/global_summary_histPM_PI2020.csv
 ```
 
-If more than one `final_country_a*_panel.dta` file is present, Figure 1 uses the most recently modified file, matching the manuscript build.
+See `data/README.md` for an inventory. The files retain the directory structure expected by the figure scripts.
 
 ## Run
 
 PowerShell:
 
 ```powershell
-$env:PM25_DATA_ROOT = "C:\path\to\the\paper\data-root"
+Rscript requirements.R
 Rscript run_all.R
 ```
 
 Bash:
 
 ```bash
-export PM25_DATA_ROOT="/path/to/the/paper/data-root"
+Rscript requirements.R
 Rscript run_all.R
 ```
 
-The runner validates all required inputs before generating any figure.
+The runner uses `data/` by default and validates all required inputs before generating any figure. To use an alternative copy of the inputs, set the optional `PM25_DATA_ROOT` environment variable to its root directory.

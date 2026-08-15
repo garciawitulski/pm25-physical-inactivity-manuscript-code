@@ -1,9 +1,6 @@
-# This is a code-only repository. Data and generated artifacts are excluded.
-data/
-outputs/
+# Minimum processed inputs for figure reproduction are tracked under data/.
+/outputs/
 
-*.csv
-*.dta
 *.rds
 *.RData
 *.rda
@@ -23,4 +20,3 @@ outputs/
 .Rproj.user/
 renv/library/
 renv/staging/
-

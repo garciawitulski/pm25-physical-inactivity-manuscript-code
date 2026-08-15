@@ -28,7 +28,7 @@ get_code_root <- function() {
 get_data_root <- function() {
   root <- Sys.getenv("PM25_DATA_ROOT", unset = "")
   if (!nzchar(root)) {
-    stop("PM25_DATA_ROOT is not set. See README.md for the required inputs.", call. = FALSE)
+    root <- file.path(get_code_root(), "data")
   }
   normalizePath(root, winslash = "/", mustWork = TRUE)
 }
@@ -131,4 +131,3 @@ save_plot_set <- function(plot_obj, stem, output_dir, width, height) {
     compression = "lzw", bg = "white", device = "tiff"
   )
 }
-
