@@ -1,0 +1,26 @@
+# This is a code-only repository. Data and generated artifacts are excluded.
+data/
+outputs/
+
+*.csv
+*.dta
+*.rds
+*.RData
+*.rda
+*.parquet
+*.gpkg
+*.shp
+*.shx
+*.dbf
+*.pdf
+*.png
+*.tif
+*.tiff
+*.svg
+
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/staging/
+
