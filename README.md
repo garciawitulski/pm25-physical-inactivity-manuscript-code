@@ -1,8 +1,8 @@
-# PM2.5 exposure and physical inactivity: manuscript figure code
+# PM2.5 exposure and physical inactivity: manuscript code
 
-This code-only repository reproduces the five figures in the main manuscript, *Impacts of long-term PM2.5 exposure on physical inactivity: quasi-experimental evidence and projected cobenefits of cleaner air pathways*.
+This repository contains the code accompanying the manuscript, *Impacts of long-term PM2.5 exposure on physical inactivity: quasi-experimental evidence and projected cobenefits of cleaner air pathways*.
 
-It intentionally excludes datasets, estimation files, the manuscript, supplementary material, and generated figures.
+Datasets and generated artifacts are not tracked in the repository.
 
 ## Figure map
 
@@ -58,4 +58,3 @@ Rscript run_all.R
 ```
 
 The runner validates all required inputs before generating any figure.
-
